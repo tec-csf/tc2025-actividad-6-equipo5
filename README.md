@@ -16,17 +16,17 @@ Compilar ambos archivos de la siguiente manera:
 <strong>Inicializar consola de control</strong><br />
 La consola de control (servidor) debe ser el primer proceso en ejecutarse, ya que es necesario que espere a que los semáforos (clientes) terminen de conectarse a través del socket previo a mostrar su información.
 ```c 
-    ./console 127.0.0.0.1
+    ./console 127.0.0.1
 ```
 <strong>Inicializar el primer semáforo</strong><br />
 Dado que uno de los semáforos debe enviar la primera señal, la cual indicará a su vecino que cambie su estado de _RED_ a _GREEN_, debe agregarse el argumento _-f_ antes de la dirección IP.
 ```c 
-    ./semaphore -f 127.0.0.0.1
+    ./semaphore -f 127.0.0.1
 ```
 <strong>Inicializar el resto de los semáforos</strong><br />
 De la misma forma en que se recomienda colocar los cuatro semáforos en cada una de las esquinas de la pantalla, se recomienda inicializar el resto de los semáforos en sentido horario.
 ```c 
-    ./semaphore 127.0.0.0.1
+    ./semaphore 127.0.0.1
 ```
 
 ### 4. Verificar que la conexión a la consola de control fue exitosa
