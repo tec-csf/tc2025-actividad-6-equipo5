@@ -13,7 +13,7 @@ Compilar ambos archivos de la siguiente manera:
     gcc semaphore.c -o semaphore
 ```
 ### 3. Inicializar consola de control y semáforos
-<strong>Inicializar la consola de control</strong><br />
+<strong>Inicializar consola de control</strong><br />
 La consola de control (servidor) debe ser el primer proceso en ejecutarse, ya que es necesario que espere a que los semáforos (clientes) terminen de conectarse a través del socket previo a mostrar su información.
 ```c 
     ./console 127.0.0.0.1
@@ -44,5 +44,5 @@ El usuario deberá copiar y pegar en cada semáforo, uno a uno, el PID del semá
 <strong>Ingresar en el semáforo que recibe el argumento _-f_ el PID del semáforo a su derecha</strong><br />
 El <strong>último</strong> semáforo para el cual se debe ingresar el PID del semáforo a su derecha es aquél que recibe el argumento _-f_, ya que en el momento en que se presione la tecla `Enter`, comenzará la comunicación entre procesos.
 
-### 6. Interrumpir los semáforos desde la consola
+### 6. Interrumpir los semáforos desde la consola de control
 Una vez conectados los semáforos entre sí, el usuario podrá usar `Ctrl + C` y `Ctrl + Z` para cambiar el estado de los semáforos mediante interrupciones o para reestablecerlos al último estado en que se encontraban antes de ser interrumpidos.
